@@ -1,0 +1,31 @@
+name: WEB_UI_project
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /WEB_UI_project/src
+        type: javaClasspath
+  - name: oogle_co_in_105.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+  - name: test_UI.recdata
+  - name: test_UI.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /WEB_UI_project/test_UI.recdata
+        type: recsessionRecdata
+  - name: test_UI.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 10.5.3.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EE9363BA1AADA0C5BAE63535306637
+    dependencies: 
+      - path: /WEB_UI_project/oogle_co_in_105.ma
+        type: test#moeb.applicationPackage
+      - path: /WEB_UI_project/test_UI.recsession
+        type: testRecsession
