@@ -8,6 +8,12 @@ resources:
         type: com.ibm.rational.test.lt.classpath
       - name: oogle_co_in_105.ma
         type: moeb.applicationPackage
+      - name: src
+        resources: 
+          - name: test
+            resources: 
+              - name: Test_UI_Test_A1EE9363BA1AADA0C5BAE63535306637.java
+                type: com.ibm.rational.test.lt.generatedCode
       - name: test_UI.recdata
       - name: test_UI.recsession
         type: com.ibm.rational.test.lt.recsession
@@ -26,3 +32,31 @@ resources:
             type: test#moeb.applicationPackage
           - path: /WEB_UI_project/test_UI.recsession
             type: testRecsession
+      - name: test_UI_1701792157120.stats
+        type: com.ibm.rational.test.lt.stats.session
+        properties: 
+          startTime: 1701792157120
+          tags: 
+          testId: A1EE9363BA1AADA0C5BAE63535306637
+          testName: test_UI
+        dependencies: 
+          - path: /GIT_UI/WEB_UI_project/test_UI_1701792157120_orch!system.mstats
+            type: statsSessionStore
+          - path: /GIT_UI/WEB_UI_project/test_UI_1701792157120_orch!system.rstats
+            type: statsSessionStore
+          - path: /GIT_UI/WEB_UI_project/test_UI_1701792157120_perf!localhost.mstats
+            type: statsSessionStore
+          - path: /GIT_UI/WEB_UI_project/test_UI_1701792157120_perf!localhost.rstats
+            type: statsSessionStore
+          - path: /WEB_UI_project/test_UI.testsuite
+            type: statsSessionTest
+          - path: /WEB_UI_project/test_UI_1701792157120.xmoebreport
+            type: statsSessionAsset
+          - path: /WEB_UI_project/test_UI_1701792164722.executiondlr
+            type: statsSessionAsset
+      - name: test_UI_1701792157120_orch!system.mstats
+      - name: test_UI_1701792157120_orch!system.rstats
+        type: com.ibm.rational.test.lt.stats.raw
+      - name: test_UI_1701792157120_perf!localhost.mstats
+      - name: test_UI_1701792157120_perf!localhost.rstats
+        type: com.ibm.rational.test.lt.stats.raw
