@@ -1,6 +1,7 @@
 name: WEB_UI_project
 version: 2
 projectReferences: 
+  - /GIT_UI
 resources: 
   - name: .classpath
     type: com.ibm.rational.test.lt.classpath
@@ -10,6 +11,7 @@ resources:
   - name: oogle_co_in_105.ma
     type: moeb.applicationPackage
   - name: src
+    missing: true
     resources: 
   - name: test_UI.recdata
   - name: test_UI.recsession
@@ -25,7 +27,7 @@ resources:
       type: com.ibm.rational.test.lt.lttest
       uid: A1EE9363BA1AADA0C5BAE63535306637
     dependencies: 
-      - path: /WEB_UI_project/oogle_co_in_105.ma
+      - path: /GIT_UI/WEB_UI_project/oogle_co_in_105.ma
         type: test#moeb.applicationPackage
       - path: /WEB_UI_project/test_UI.recsession
         type: testRecsession
