@@ -1,0 +1,37 @@
+name: Dev
+version: 2
+projectReferences: 
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /Dev/src
+        type: javaClasspath
+  - name: _google_com_c25.ma
+    type: moeb.applicationPackage
+  - name: src
+    resources: 
+  - name: test(2).recdata
+  - name: test(2).recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Dev/test(2).recdata
+        type: recsessionRecdata
+  - name: test.recdata
+  - name: test.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /Dev/test.recdata
+        type: recsessionRecdata
+  - name: test.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.2.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1EF759901432B40C283B73863643532
+    dependencies: 
+      - path: /Dev/_google_com_c25.ma
+        type: test#moeb.applicationPackage
+      - path: /Dev/test(2).recsession
+        type: testRecsession
