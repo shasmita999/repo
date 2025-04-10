@@ -12,10 +12,6 @@ resources:
     type: moeb.applicationPackage
   - name: src
     resources: 
-      - name: test
-        resources: 
-          - name: Test_UI_Test_A1EE9363BA1AADA0C5BAE63535306637.java
-            type: com.ibm.rational.test.lt.generatedCode
   - name: test_UI.recdata
   - name: test_UI.recsession
     type: com.ibm.rational.test.lt.recsession
@@ -24,7 +20,7 @@ resources:
         type: recsessionRecdata
   - name: test_UI.testsuite
     type: com.ibm.rational.test.lt.test
-    version: 10.5.3.0
+    version: 11.0.4.0
     properties: 
       features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
       type: com.ibm.rational.test.lt.lttest
@@ -34,33 +30,9 @@ resources:
         type: test#moeb.applicationPackage
       - path: /WEB_UI_project/test_UI.recsession
         type: testRecsession
-  - name: test_UI_1701792157120.stats
-    type: com.ibm.rational.test.lt.stats.session
-    properties: 
-      startTime: 1701792157120
-      tags: 
-      testId: A1EE9363BA1AADA0C5BAE63535306637
-      testName: test_UI
+  - name: testest.csv
+    type: com.ibm.rational.test.lt.datapool
     dependencies: 
-      - path: /WEB_UI_project/test_UI.testsuite
-        type: statsSessionTest
-      - path: /WEB_UI_project/test_UI_1701792157120.xmoebreport
-        type: statsSessionAsset
-      - path: /WEB_UI_project/test_UI_1701792157120_orch!system.mstats
-        type: statsSessionStore
-      - path: /WEB_UI_project/test_UI_1701792157120_orch!system.rstats
-        type: statsSessionStore
-      - path: /WEB_UI_project/test_UI_1701792157120_perf!localhost.mstats
-        type: statsSessionStore
-      - path: /WEB_UI_project/test_UI_1701792157120_perf!localhost.rstats
-        type: statsSessionStore
-      - path: /WEB_UI_project/test_UI_1701792164722.executiondlr
-        type: statsSessionAsset
-  - name: test_UI_1701792157120.xmoebreport
-  - name: test_UI_1701792157120_orch!system.mstats
-  - name: test_UI_1701792157120_orch!system.rstats
-    type: com.ibm.rational.test.lt.stats.raw
-  - name: test_UI_1701792157120_perf!localhost.mstats
-  - name: test_UI_1701792157120_perf!localhost.rstats
-    type: com.ibm.rational.test.lt.stats.raw
-  - name: test_UI_1701792164722.executiondlr
+      - path: /WEB_UI_project/testest.csv.metadata
+        type: datasetMetadata
+  - name: testest.csv.metadata
